@@ -1,0 +1,6 @@
+React is an open-source javascript library and it's maintained and developed by Facebook. It's mainly used for creating the interactive user interface for the single-page website.  In the react, the developers create the UI components and developers can reuse the components to build large and complex applications. It was developed by "Jordan Walke" in 2011 and "Jordan Walke" was a software engineer at Facebook. React developed for Facebook "NewsSection". But it was officially released in May 2013.
+
+18.2 is the current version of the reactjs.
+
+Virtual DOM
+The Virtual DOM in React is a lightweight, in-memory representation of the actual Document Object Model (DOM). When a React component's state or props change, React creates a new virtual DOM, which is a copy of the current state of the UI. Instead of directly updating the real DOM, React efficiently calculates the differences (diffs) between the new and old virtual DOMs. It then selectively updates only the parts of the actual DOM that have changed, minimizing performance bottlenecks associated with frequent DOM manipulations. This process enhances React's speed and responsiveness, making it a key factor in the library's popularity for building dynamic and interactive user interfaces on the web.
