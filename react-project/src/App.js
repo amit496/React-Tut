@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import Counter from './counter/Counter';
+import Randombgcolor from './random-bgcolor/Random-bgcolor';
 
 function App() {
   return (
@@ -20,7 +19,10 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-    <Counter />
+    <>
+      {/* <Counter /> */}
+      <Randombgcolor />
+    </>
   );
 }
 
