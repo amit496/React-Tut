@@ -1,40 +1,18 @@
-import { useState } from 'react';
+import { useState } from "react";
+let Counter = () =>{
+    let [number, setnumber] = useState(0);
 
-let Counter = () => {
-  let [number, setNumber] = useState(0);
 
-  let increment_fun = () => {
-    setNumber(number + 1);
-  };
-
-  let decrement_fun = () => {
-    if (number > 0) {
-      setNumber(number - 1);
-    }
-  };
-
-  return (
-    <div className="w-screen h-screen bg-gray-800 flex justify-center items-center">
-      <div className="content_container bg-violet-500 p-5 rounded-lg text-white flex justify-center flex-col">
-        <p className="p-12 font-semibold text-center">Counter: {number}</p>
-        <div className="content_container flex justify-center">
-          <button
-            onClick={increment_fun}
-            className="bg-white font-semibold text-violet-600 m-6 p-3 rounded hover:bg-violet-700 hover:text-white"
-          >
-            INCREMENT
-          </button>
-          <button
-            onClick={decrement_fun}
-            className={`bg-white font-semibold text-violet-600 m-6 p-3 rounded hover:bg-violet-700 hover:text-white ${number === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
-            disabled={number === 0}
-          >
-            DECREMENT
-          </button>
+    return(
+        <div className="h-screen w-screen bg-gray-900 flex justify-center items-center">
+            <div className="box flex items-center flex-col">
+                <p className="text-white text-3xl tracking-wider">Value : {number}</p>
+                <div className="button mt-5">
+                    <button onClick={() => setnumber(number + 1)} className="bg-white text-xl text-violet-900 tracking-wider p-3 pr-6 pl-6 rounded-sm">INCREMENT</button>
+                    <button onClick={() => setnumber(number - 1)} className={`bg-white text-xl text-violet-900 tracking-wider p-3 rounded-sm ml-3 ${number === 0 ? 'opacity-50 cursor-not-allowed' : ''}`} disabled={number === 0}>DECREMENT</button>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
-};
-
+    );
+}
 export default Counter;

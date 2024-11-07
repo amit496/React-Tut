@@ -1,21 +1,16 @@
 import { useState } from "react";
-
 let BGColor = () =>{
 
-    let [color, BgColor ] = useState('bg-white')
+    let [color, setColor] = useState('bg-white');
 
     return(
-        <>
-            <div className={`w-screen h-screen flex justify-center items-center ${color} `}>
-                <button onClick={() => BgColor('bg-red-800')} className={` ${color === 'bg-red-800' ? 'bg-white text-black' : 'bg-red-800 text-white'}  w-28 p-2 pr-5 pl-5 -tracking-tight rounded-full ml-3 font-semibold`}>Red</button>
-                <button  onClick={() => BgColor('bg-yellow-500')} className={`${   color === 'bg-yellow-500' ?  'bg-white text-black' : 'bg-yellow-500 text-white' } w-28 p-2 pr-5 pl-5 -tracking-tight rounded-full ml-3 font-semibold`}> Yellow </button>
-                <button onClick={() => BgColor('bg-orange-500')} className={`${color === 'bg-orange-500' ? 'bg-white text-black' : 'bg-orange-500 text-white'} w-28 p-2 pr-5 pl-5 -tracking-tight rounded-full ml-3 font-semibold`}>Orange</button>
-                <button onClick={() => BgColor('bg-violet-500')} className={` ${color === 'bg-violet-500' ? 'bg-white text-black' : 'bg-violet-500 text-white'} w-28 p-2 pr-5 pl-5 -tracking-tight rounded-full ml-3 font-semibold`}>Violet</button>
-                <button onClick={() => BgColor('bg-white')} className={` ${color === 'bg-white' ? 'bg-black text-white' : 'bg-black text-white'} w-28 p-2 pr-5 pl-5 -tracking-tight rounded-full ml-3 font-semibold`}>Reset</button>
-            </div>
-
-        </>
+        <div className={`flex justify-center items-center h-screen w-screen ${color} `}>
+            <button onClick={() => setColor('bg-red-700')}  className={`${color === 'bg-red-700' ? 'bg-white text-black' : 'bg-red-700 text-white'} text-2xl p-2 pl-6 pr-6 rounded-md hover:bg-red-900 transition-all duration-500`} > Red </button> 
+            <button onClick={() => setColor('bg-violet-700')} className={`${color === 'bg-violet-700' ? 'bg-white text-black' : 'bg-violet-700 text-white'} text-2xl p-2 pl-6 pr-6 text-white rounded-md hover:bg-violet-900 transition-all duration-500 ml-3`}>Violet</button>
+            <button onClick={() => setColor('bg-yellow-700')} className={`${color === 'bg-yellow-700' ? 'bg-white text-black' : 'bg-yellow-700 text-white' } text-2xl p-2 pl-6 pr-6 text-white rounded-md hover:bg-yellow-900 transition-all duration-500 ml-3`}>Yellow</button>
+            <button onClick={() => setColor('bg-sky-700')} className={` ${color === 'bg-sky-700' ? 'bg-white text-black' : 'bg-sky-700 text-white' } text-2xl p-2 pl-6 pr-6 text-white rounded-md hover:bg-sky-900 transition-all duration-500 ml-3`}>Sky</button>
+            <button onClick={() => setColor('bg-green-700')} className={`${color === 'bg-green-700' ? 'bg-white text-black' : 'bg-green-700 text-white'} text-2xl p-2 pl-6 pr-6 text-white rounded-md hover:bg-green-900 transition-all duration-500 ml-3`}>Green</button>
+        </div>
     );
 }
-
-export default BGColor
+export default BGColor;
